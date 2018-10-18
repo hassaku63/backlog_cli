@@ -1,0 +1,3 @@
+requests==2.19.1
+PyYAML==3.13
+git+git://github.com/hassaku63/backlog_util.git@master
