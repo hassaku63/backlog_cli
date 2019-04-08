@@ -1,9 +1,20 @@
 # backlog_cli
 Python3製のBacklog CLI
 
-# usage
+# Usage
 
-## credential
+Installation
+
+```bach
+git clone git@github.com:hassaku63/backlog_cli.git
+cd /path/to/this/package
+pip install .
+
+# or
+pip install git+git://github.com/hassaku63/backlog_cli@<BRANCH_NAME>
+```
+
+## Credential
 
 APIの認証情報は `--conf CONF` で指定するか、環境変数で定義する
 
@@ -20,7 +31,7 @@ BACKLOG_SPACE=space
 BACKLOG_API_KEY=api_key
 ```
 
-# command example
+# Example
 
 ```
 $ backlog -h
