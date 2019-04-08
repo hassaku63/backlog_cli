@@ -45,7 +45,21 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   --conf CONF
+```
 
+```
+$ backlog project -h
+usage: backlog project [-h]
+                       {list,ls,get,list-users,list-issue-types,list-categories}
+                       ...
+
+Project operations
+
+positional arguments:
+  {list,ls,get,list-users,list-issue-types,list-categories}
+
+optional arguments:
+  -h, --help            show this help message and exit
 ```
 
 ```
