@@ -47,7 +47,7 @@ def build_parser():
     subparsers = root_parser.add_subparsers()
     parser_project = subparsers.add_parser('project', description='Project operations')
     parser_user = subparsers.add_parser('user', description='User operations')
-    parser_issue = subparsers.add_parser('issue', aliases=['iss'], description='Issue operations')
+    parser_issue = subparsers.add_parser('issue', description='Issue operations')
     parser_wiki = subparsers.add_parser('wiki', description='Wiki operations')
 
     """
@@ -61,9 +61,9 @@ def build_parser():
     # Project subparser
     project_list_subparser = project_subparsers.add_parser('list', aliases=['ls'])
     project_get_subparser = project_subparsers.add_parser('get')
-    project_list_users_subparser = project_subparsers.add_parser('list-users', aliases=['lu'])
-    project_list_issue_types = project_subparsers.add_parser('list-issue-types', aliases=['li'])
-    project_list_categories = project_subparsers.add_parser('list-categories', aliases=['lc'])
+    project_list_users_subparser = project_subparsers.add_parser('list-users')
+    project_list_issue_types = project_subparsers.add_parser('list-issue-types')
+    project_list_categories = project_subparsers.add_parser('list-categories')
 
     # User
     user_list_subparser = user_subparsers.add_parser('list', aliases=['ls'])
