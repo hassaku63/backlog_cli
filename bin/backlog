@@ -2,11 +2,11 @@
 # coding: utf-8
 
 import sys
-import backlogcli
+from backlogcli import cli
 
 
 def main():
-    return backlogcli.cli.main()
+    return cli.main()
 
 
 if __name__ == '__main__':
