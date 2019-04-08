@@ -35,16 +35,17 @@ export BACKLOG_API_KEY=api_key
 
 ```
 $ backlog -h
-usage: backlog [-h] [--conf CONF] {project,user,issue,iss,wiki} ...
+usage: backlog [-h] [--conf CONF] {project,user,issue,wiki} ...
 
 Backlog CLI (beta)
 
 positional arguments:
-  {project,user,issue,iss,wiki}
+  {project,user,issue,wiki}
 
 optional arguments:
   -h, --help            show this help message and exit
   --conf CONF
+
 ```
 
 ```
