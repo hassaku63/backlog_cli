@@ -31,6 +31,12 @@ export BACKLOG_SPACE=space
 export BACKLOG_API_KEY=api_key
 ```
 
+### 読み込みの優先順位
+
+1. `--conf` の指定先
+2. `conf.yml` 
+3. 環境変数 `BACKLOG_SPACE` `BACKLOG_API_KEY`
+
 ## Example
 
 ```
