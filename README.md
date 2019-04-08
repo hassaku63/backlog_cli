@@ -31,7 +31,7 @@ BACKLOG_SPACE=space
 BACKLOG_API_KEY=api_key
 ```
 
-# Example
+## Example
 
 ```
 $ backlog -h
