@@ -7,11 +7,11 @@ from backlogcli.cli.parser import build_parser
 
 import logging
 
-# logger = logging.getLogger(__name__)
-# logger.setLevel(logging.WARN)
-# stream_handler = logging.StreamHandler(sys.stderr)
-# stream_handler.setLevel(logging.ERROR)
-# logger.addHandler(stream_handler)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.WARNING)
+stream_handler = logging.StreamHandler(sys.stderr)
+stream_handler.setLevel(logging.ERROR)
+logger.addHandler(stream_handler)
 
 
 def main():
@@ -19,18 +19,17 @@ def main():
 
     args = cli_parser.parse_args()
 
-    if 'conf' in args:
-        conf = load_conf(args.conf)['backlog']
-    else:
+    if not os.path.exists(args.conf):
         if 'BACKLOG_SPACE' in os.environ.keys() and 'BACKLOG_API_KEY' in os.environ.keys():
             conf = dict(
                 space=os.environ.get('BACKLOG_SPACE'),
                 api_key=os.environ.get('BACKLOG_API_KEY')
             )
-        elif os.path.exists('conf.yml'):
-            conf = load_conf()['backlog']
         else:
+            logger.error('Env BACKLOG_SPACE and BACKLOG_API_KEY must be defined')
             return -1
+    else:
+        conf = load_conf(args.conf)['backlog']
 
     backlog_api = BacklogAPI(space=conf['space'], api_key=conf['api_key'])
 
