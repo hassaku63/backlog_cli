@@ -27,8 +27,8 @@ backlog:
 
 ```bash
 # env
-BACKLOG_SPACE=space
-BACKLOG_API_KEY=api_key
+export BACKLOG_SPACE=space
+export BACKLOG_API_KEY=api_key
 ```
 
 ## Example
