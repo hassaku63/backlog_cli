@@ -89,7 +89,4 @@ $ backlog wiki get --wiki-id 0123456789 | jq -r '.content'
 
 https://github.com/hassaku63/pbl
 
-|key|value|
-|:---|:---|
-|Slack internal team|#ext-dev-backlog-util @hashimoto|
-|Twitter|https://twitter.com/hassaku_63|
+[twitter:hassaku_63](https://twitter.com/hassaku_63)
